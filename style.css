@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: rosybrown;
+  color: gold;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.task {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.task-btn {
+  color: seagreen;
+  user-select: none;
+}

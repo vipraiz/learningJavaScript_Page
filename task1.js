@@ -30,4 +30,6 @@ function startGame() {
   }
 }
 
-while (startGame() && confirm('Сыграем ещё раз?'));
+$('.task1-btn').on('click', function () {
+  while (startGame() && confirm('Сыграем ещё раз?'));
+});

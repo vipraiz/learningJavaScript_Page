@@ -15,4 +15,6 @@ function getArray() {
   return arr;
 }
 
-alert(getArray().reduce((a, b) => a + b)); // 17485588610
+$('.task2-btn').on('click', function () {
+  alert(getArray().reduce((a, b) => a + b)); // 17485588610
+});
