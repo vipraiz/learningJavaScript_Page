@@ -5,30 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
 
   <body>
-    <section class="section">
-      <div class="container">
+    <div class="container">
+      <section class="side"></section>
+      <section class="section">
         <div class="task">
-          <div class="task1">task1</div>
-          <button class="task-btn task1-btn">нажми на меня</button>
+          <div class="task1">
+            task1
+            <p>Игра "Угадай число".</p>
+          </div>
+          <div class="task1-inputs">
+            <input type="number" min="1" max="9999" value="1" id="task1-min" />
+            <input type="number" min="1" max="9999" value="10" id="task1-max" />
+          </div>
+          <button class="task-btn task1-btn">Нажми на меня</button>
         </div>
 
         <div class="task">
-          <div class="task2">task2</div>
-          <button class="task-btn task2-btn">нажми на меня</button>
+          <div class="task2">
+            task2
+            <p>
+              Создать список, состоящий из кубов нечётных чисел от 1 до 1000,
+              таких чтобы сумма цифр этого числа делилась на 7 без остатка.
+              Вернуть сумму всех элементов списка.
+            </p>
+          </div>
+          <button class="task-btn task2-btn">Нажми на меня</button>
         </div>
 
         <div class="task">
-          <div class="task3">task3</div>
-          <button class="task-btn task3-btn">нажми на меня</button>
+          <div class="task3">
+            task3
+            <p>
+              Дан список: ['в', '5', 'часов', '17', 'минут', 'температура',
+              'воздуха', 'была', '+5', 'градусов']. <br />
+              Необходимо его обработать — обособить каждое целое число кавычками
+              и дополнить нулём до двух разрядов: ['в', '"', '05', '"', 'часов',
+              '"', '17', '"', 'минут', 'температура', 'воздуха', 'была', '"',
+              '+05', '"', 'градусов'] <br /><br />Новый список не создавать!
+              Сформировать из обработанного списка строку: в "05" часов "17"
+              минут температура воздуха была "+05" градусов
+            </p>
+          </div>
+          <button class="task-btn task3-btn">Нажми на меня</button>
         </div>
-      </div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/task1.js"></script>
-    <script src="/task2.js"></script>
+
+        <div class="task">
+          <div class="task4">
+            task4
+            <p>
+              Создать список, содержащий цены на товары (10–20 товаров),
+              например: [57.8, 46.51, 97, ...] <br /><br />
+              * Вывести на экран эти цены через запятую в одну строку, цена
+              должна отображаться в виде `r` руб `k` коп (например «5 руб 04
+              коп»). Подумать, как из цены получить рубли и копейки, как
+              добавить нули, если, например, получилось 7 копеек или 0 копеек
+              (должно быть 07 коп или 00 коп). <br />
+              * Вывести цены, отсортированные по возрастанию, новый список не
+              создавать.<br />
+              * Создать и вывести новый список, содержащий те же цены, но
+              отсортированные по убыванию.<br />
+              * Вывести цены пяти самых дорогих товаров.
+            </p>
+          </div>
+          <button class="task-btn task4-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task">
+          <div class="task5">
+            task5
+            <p>текст</p>
+          </div>
+          <button class="task-btn task5-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task">
+          <div class="task6">
+            task6
+            <p>текст</p>
+          </div>
+          <button class="task-btn task6-btn">Нажми на меня</button>
+        </div>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/javascript/task1.js"></script>
+    <script src="/javascript/task2.js"></script>
+    <script src="/javascript/task3.js"></script>
+    <script src="/javascript/task4.js"></script>
+    <script src="/javascript/task5.js"></script>
+    <script src="/javascript/task6.js"></script>
   </body>
 </html>
