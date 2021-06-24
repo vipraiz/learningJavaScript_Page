@@ -34,8 +34,8 @@ $('.task1-inputs')
   });
 
 $('.task1-btn').on('click', function () {
-  let min = Number($('#task1-min').val()),
-    max = Number($('#task1-max').val());
+  let min = Number($('#task1-minInput').val()),
+    max = Number($('#task1-maxInput').val());
   if (min > max) {
     alert('Значение левой границы не может быть больше правой!');
     return;

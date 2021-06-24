@@ -24,8 +24,20 @@
             <p>Игра "Угадай число".</p>
           </div>
           <div class="task1-inputs">
-            <input type="number" min="1" max="9999" value="1" id="task1-min" />
-            <input type="number" min="1" max="9999" value="10" id="task1-max" />
+            <input
+              type="number"
+              min="1"
+              max="9999"
+              value="1"
+              id="task1-minInput"
+            />
+            <input
+              type="number"
+              min="1"
+              max="9999"
+              value="10"
+              id="task1-maxInput"
+            />
           </div>
           <button class="task-btn task1-btn">Нажми на меня</button>
         </div>
@@ -83,8 +95,12 @@
         <div class="task">
           <div class="task5">
             task5
-            <p>текст</p>
+            <p>
+              Выведите список простых множителей числа, введеного пользователем,
+              в порядке возрастания, разделенных знаком «*».
+            </p>
           </div>
+          <input type="number" min="1" max="9999" value="10" id="task5-input" />
           <button class="task-btn task5-btn">Нажми на меня</button>
         </div>
 
@@ -104,5 +120,6 @@
     <script src="/javascript/task4.js"></script>
     <script src="/javascript/task5.js"></script>
     <script src="/javascript/task6.js"></script>
+    <script src="/javascript/task7.js"></script>
   </body>
 </html>
