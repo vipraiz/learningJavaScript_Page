@@ -1,8 +1,8 @@
 // дебильное решение
-function getPrimeFactorsStr(value) {
+function getPrimeFactorsStr1(value) {
   let string = '',
-    prime = 2;
-  let divisor;
+    prime = 2,
+    divisor;
 
   while (value > 1) {
     if (value % prime == 0) {
@@ -28,11 +28,11 @@ function getPrimeFactorsStr(value) {
 }
 
 // нормальное решение
-function primeFactors(value) {
+function getPrimeFactorsStr2(value) {
   let string = '',
     divisor = 2;
 
-  while (value >= 2) {
+  while (divisor <= Math.sqrt(value)) {
     if (value % divisor == 0) {
       string += `${divisor}*`;
       value = value / divisor;
@@ -40,6 +40,8 @@ function primeFactors(value) {
       ++divisor;
     }
   }
+  if (value > 1) string += `${value}*`;
+
   string = string.slice(0, -1);
   return string;
 }
@@ -47,17 +49,17 @@ function primeFactors(value) {
 $('#task5-1-input').on('input', function () {
   $(this).val((_i, v) => Math.max(this.min, Math.min(this.max, v)));
   let value = Number($('#task5-1-input').val());
-  $('.task5-1-output').text(getPrimeFactorsStr(value));
+  $('.task5-1-output').text(getPrimeFactorsStr1(value));
 });
 
 $('#task5-2-input').on('input', function () {
   $(this).val((_i, v) => Math.max(this.min, Math.min(this.max, v)));
   let value = Number($('#task5-2-input').val());
-  $('.task5-2-output').text(primeFactors(value));
+  $('.task5-2-output').text(getPrimeFactorsStr2(value));
 });
 
 let value1 = Number($('#task5-1-input').val());
-$('.task5-1-output').text(getPrimeFactorsStr(value1));
+$('.task5-1-output').text(getPrimeFactorsStr1(value1));
 
 let value2 = Number($('#task5-2-input').val());
-$('.task5-2-output').text(primeFactors(value2));
+$('.task5-2-output').text(getPrimeFactorsStr2(value2));
