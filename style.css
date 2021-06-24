@@ -40,6 +40,10 @@ input {
   user-select: none;
 }
 
+.task span {
+  font-size: 18px;
+}
+
 .task p {
   user-select: text;
   text-align: left;
@@ -75,4 +79,11 @@ input {
 .task5 + input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.task5-1-output,
+.task5-2-output {
+  padding-top: 10px;
+  font-size: 20px;
+  user-select: all;
 }
