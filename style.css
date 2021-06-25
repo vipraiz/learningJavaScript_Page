@@ -8,6 +8,16 @@ html {
   box-sizing: inherit;
 }
 
+*::after {
+  color: #a2928b;
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+}
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   opacity: 1;
@@ -17,8 +27,39 @@ body {
   font-family: 'Bitter', sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  background-color: #e1c7c7;
-  color: #383838;
+  color: #433c47;
+
+  background-attachment: fixed;
+  background-color: #f9f7f6;
+  background-size: 50px 50px;
+  background-image: linear-gradient(
+      -45deg,
+      transparent 52%,
+      rgba(255, 255, 255, 0.9) 54%,
+      transparent 55%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 52%,
+      rgba(255, 255, 255, 0.6) 54%,
+      transparent 55%,
+      transparent
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 52%,
+      transparent 53%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 52%,
+      transparent 53%,
+      transparent
+    );
 }
 
 input {
@@ -32,12 +73,13 @@ input {
 
 .task {
   max-width: 720px;
-  border: 4mm ridge #ffa5ec;
+  border: 4mm ridge #a2928b;
   text-align: center;
   margin: 0 auto;
   padding: 40px 20px;
   font-weight: 700;
   user-select: none;
+  background-color: #f9f7f6;
 }
 
 .task span {
@@ -50,7 +92,9 @@ input {
   font-size: 14px;
   text-transform: none;
   font-weight: 400;
-  color: rgb(61, 80, 26);
+  color: #433c47;
+  padding-left: 10px;
+  border-left: 8px solid #a2928b;
 }
 
 .task1-inputs input {
@@ -58,21 +102,43 @@ input {
 }
 
 .task-btn {
-  display: block;
-  margin: 20px auto 0;
-  color: #000000;
-  background-color: #ebc3ff;
-  border-radius: 10%;
-  user-select: none;
-  font-family: 'Bitter', sans-serif;
-  font-weight: 400;
-  border: 2px solid #cc58b3a2;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #a2928b;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #a2928b;
+  transition: 0.2s ease-in-out;
+  background: none;
+}
+
+.task-btn:before {
+  content: '';
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5)
+  );
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
 }
 
 .task-btn:hover {
-  color: rgb(40, 110, 71);
-  background-color: #e6b9ff;
-  box-shadow: inset 0 0 0 3px #ffa5eb85;
+  background: #a2928b;
+  color: #f9f7f6;
+}
+
+.task-btn:hover:before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
 }
 
 .task1-inputMin,
@@ -84,22 +150,10 @@ input {
 
 .task1-inputMin::after {
   content: 'MIN';
-  font-size: 20px;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
 }
 
 .task1-inputMax::after {
   content: 'MAX';
-  font-size: 18px;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
 }
 
 .task5 + input::-webkit-outer-spin-button,
@@ -110,9 +164,14 @@ input {
 
 .task5-1-output,
 .task5-2-output {
+  color: #a2928b;
   padding-top: 10px;
   font-size: 20px;
   user-select: all;
+}
+
+.task6-inputs input {
+  width: 60px;
 }
 
 .task6-inputA,
@@ -125,30 +184,12 @@ input {
 
 .task6-inputA::after {
   content: 'A';
-  font-size: 18px;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
 }
 
 .task6-inputB::after {
   content: 'B';
-  font-size: 18px;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
 }
 
 .task6-inputC::after {
   content: 'C';
-  font-size: 18px;
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -20px;
 }
