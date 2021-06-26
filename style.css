@@ -124,6 +124,7 @@ input {
   text-align: left;
   margin: 0 auto;
   padding: 4px 0;
+  cursor: pointer;
 }
 
 .arrows {
@@ -141,7 +142,7 @@ input {
   left: 10px;
   bottom: -16px;
   border: 10px solid transparent;
-  border-top: 10px solid #a2928b;
+  border-top: 10px solid green;
   border-width: 12px 7px;
   pointer-events: none;
 }
@@ -152,7 +153,7 @@ input {
   left: 10px;
   bottom: -16px;
   border: 10px solid transparent;
-  border-top: 10px solid green;
+  border-top: 10px solid #a2928b;
   border-width: 12px 7px;
   pointer-events: none;
 }
@@ -164,7 +165,7 @@ input {
   left: 10px;
   bottom: 12px;
   border: 10px solid transparent;
-  border-bottom: 10px solid green;
+  border-bottom: 10px solid #a2928b;
   border-width: 12px 7px;
 }
 
@@ -174,7 +175,7 @@ input {
   left: 10px;
   bottom: 12px;
   border: 10px solid transparent;
-  border-bottom: 10px solid #a2928b;
+  border-bottom: 10px solid green;
   border-width: 12px 7px;
 }
 
