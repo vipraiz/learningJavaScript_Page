@@ -4,147 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
 
   <body>
     <div class="container">
-      <section class="side"></section>
-      <section class="section">
-        <div class="task">
-          <div class="task8">
-            task8
-            <p>текст</p>
-          </div>
-          <button class="task-btn task8-btn">Нажми на меня</button>
+      <section class="hat">
+        <div class="sort">
+          Сортировка
+          <input type="checkbox" id="stateInput" />
+          <label class="arrows" for="stateInput"></label>
         </div>
-
-        <div class="task">
-          <div class="task7">
-            task7
-            <p>текст</p>
-          </div>
-          <button class="task-btn task7-btn">Нажми на меня</button>
-        </div>
-
-        <div class="task">
-          <div class="task6">
-            task6
-            <p>
-              Заданы три числа: A, B, C. Необходимо выяснить, можно ли так
-              переставить цифры в числах A и B, чтобы в сумме получилось C.
-            </p>
-          </div>
-          <div class="task6-inputs">
-            <div class="task6-inputA">
-              <input type="number" min="1" max="9999" value="12" id="task6-a" />
-            </div>
-            <div class="task6-inputB">
-              <input type="number" min="1" max="9999" value="31" id="task6-b" />
-            </div>
-            <div class="task6-inputC">
-              <input type="number" min="1" max="9999" value="25" id="task6-c" />
-            </div>
-          </div>
-          <button class="task-btn task6-btn">Нажми на меня</button>
-        </div>
-
-        <div class="task">
-          <div class="task5">
-            task5.2 (моё нормальное решение)
-            <p>
-              Выведите строку с простыми множителей числа, введеного
-              пользователем, в порядке возрастания, разделенных знаком «*».
-            </p>
-          </div>
-          <input
-            type="number"
-            min="1"
-            max="999999999999"
-            value="10"
-            id="task5-2-input"
-          />
-          <div class="task5-2-output"></div>
-        </div>
-
-        <div class="task">
-          <div class="task5">
-            task5.1 (моё дебильное решение)
-            <p>
-              Выведите строку с простыми множителей числа, введеного
-              пользователем, в порядке возрастания, разделенных знаком «*».
-            </p>
-            <span> большие значения вводить опасно! </span>
-          </div>
-          <input
-            type="number"
-            min="1"
-            max="999999999999"
-            value="10"
-            id="task5-1-input"
-          />
-          <div class="task5-1-output"></div>
-        </div>
-
-        <div class="task">
-          <div class="task4">
-            task4
-            <p>
-              Создать список, содержащий цены на товары (10–20 товаров),
-              например: [57.8, 46.51, 97, ...] <br /><br />
-              * Вывести на экран эти цены через запятую в одну строку, цена
-              должна отображаться в виде `r` руб `k` коп (например «5 руб 04
-              коп»). Подумать, как из цены получить рубли и копейки, как
-              добавить нули, если, например, получилось 7 копеек или 0 копеек
-              (должно быть 07 коп или 00 коп). <br />
-              * Вывести цены, отсортированные по возрастанию, новый список не
-              создавать.<br />
-              * Создать и вывести новый список, содержащий те же цены, но
-              отсортированные по убыванию.<br />
-              * Вывести цены пяти самых дорогих товаров.
-            </p>
-          </div>
-          <button class="task-btn task4-btn">Нажми на меня</button>
-        </div>
-
-        <div class="task">
-          <div class="task3">
-            task3
-            <p>
-              Дан список: ['в', '5', 'часов', '17', 'минут', 'температура',
-              'воздуха', 'была', '+5', 'градусов']. <br />
-              Необходимо его обработать — обособить каждое целое число кавычками
-              и дополнить нулём до двух разрядов: ['в', '"', '05', '"', 'часов',
-              '"', '17', '"', 'минут', 'температура', 'воздуха', 'была', '"',
-              '+05', '"', 'градусов'] <br /><br />Новый список не создавать!
-              Сформировать из обработанного списка строку: в "05" часов "17"
-              минут температура воздуха была "+05" градусов
-            </p>
-          </div>
-          <button class="task-btn task3-btn">Нажми на меня</button>
-        </div>
-
-        <div class="task">
-          <div class="task2">
-            task2
-            <p>
-              Создать список, состоящий из кубов нечётных чисел от 1 до 1000,
-              таких чтобы сумма цифр этого числа делилась на 7 без остатка.
-              Вернуть сумму всех элементов списка.
-            </p>
-          </div>
-          <button class="task-btn task2-btn">Нажми на меня</button>
-        </div>
-
-        <div class="task">
-          <div class="task1">
+      </section>
+      <section class="tasks">
+        <div class="task" sort-rating="1">
+          <div class="task-announce">
             task1
             <p>Игра "Угадай число".</p>
           </div>
@@ -171,9 +56,135 @@
           </div>
           <button class="task-btn task1-btn">Нажми на меня</button>
         </div>
+
+        <div class="task task2" sort-rating="2">
+          <div class="task-announce">
+            task2
+            <p>
+              Создать список, состоящий из кубов нечётных чисел от 1 до 1000,
+              таких чтобы сумма цифр этого числа делилась на 7 без остатка.
+              Вернуть сумму всех элементов списка.
+            </p>
+          </div>
+          <button class="task-btn task2-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task task3" sort-rating="3">
+          <div class="task-announce">
+            task3
+            <p>
+              Дан список: ['в', '5', 'часов', '17', 'минут', 'температура',
+              'воздуха', 'была', '+5', 'градусов']. <br />
+              Необходимо его обработать — обособить каждое целое число кавычками
+              и дополнить нулём до двух разрядов: ['в', '"', '05', '"', 'часов',
+              '"', '17', '"', 'минут', 'температура', 'воздуха', 'была', '"',
+              '+05', '"', 'градусов'] <br /><br />Новый список не создавать!
+              Сформировать из обработанного списка строку: в "05" часов "17"
+              минут температура воздуха была "+05" градусов
+            </p>
+          </div>
+          <button class="task-btn task3-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task task4" sort-rating="4">
+          <div class="task-announce">
+            task4
+            <p>
+              Создать список, содержащий цены на товары (10–20 товаров),
+              например: [57.8, 46.51, 97, ...] <br /><br />
+              * Вывести на экран эти цены, цена должна отображаться в виде `r`
+              руб `k` коп (например «5 руб 04 коп»). Подумать, как из цены
+              получить рубли и копейки, как добавить нули, если, например,
+              получилось 7 копеек или 0 копеек (должно быть 07 коп или 00 коп).
+              <br />
+              * Вывести цены, отсортированные по возрастанию, новый список не
+              создавать.<br />
+              * Создать и вывести новый список, содержащий те же цены, но
+              отсортированные по убыванию.<br />
+              * Вывести цены пяти самых дорогих товаров.
+            </p>
+          </div>
+          <button class="task-btn task4-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task task5" sort-rating="5">
+          <div class="task-announce">
+            task5.1 (моё плохое решение)
+            <p>
+              Выведите строку с простыми множителей числа, введеного
+              пользователем, в порядке возрастания, разделенных знаком «*».
+            </p>
+            <span> большие значения вводить опасно! </span>
+          </div>
+          <input
+            type="number"
+            min="1"
+            max="999999999999"
+            value="10"
+            id="task5-1-input"
+          />
+          <div class="task5-1-output"></div>
+        </div>
+
+        <div class="task task5" sort-rating="6">
+          <div class="task-announce">
+            task5.2 (моё нормальное решение)
+            <p>
+              Выведите строку с простыми множителей числа, введеного
+              пользователем, в порядке возрастания, разделенных знаком «*».
+            </p>
+          </div>
+          <input
+            type="number"
+            min="1"
+            max="999999999999"
+            value="10"
+            id="task5-2-input"
+          />
+          <div class="task5-2-output"></div>
+        </div>
+
+        <div class="task task6" sort-rating="7">
+          <div class="task-announce">
+            task6
+            <p>
+              Заданы три числа: A, B, C. Необходимо выяснить, можно ли так
+              переставить цифры в числах A и B, чтобы в сумме получилось C.
+            </p>
+          </div>
+          <div class="task6-inputs">
+            <div class="task6-inputA">
+              <input type="number" min="1" max="9999" value="12" id="task6-a" />
+            </div>
+            <div class="task6-inputB">
+              <input type="number" min="1" max="9999" value="31" id="task6-b" />
+            </div>
+            <div class="task6-inputC">
+              <input type="number" min="1" max="9999" value="25" id="task6-c" />
+            </div>
+          </div>
+          <button class="task-btn task6-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task task7" sort-rating="8">
+          <div class="task-announce">
+            task7
+            <p>текст</p>
+          </div>
+          <button class="task-btn task7-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task task8" sort-rating="9">
+          <div class="task-announce">
+            task8
+            <p>текст</p>
+          </div>
+          <button class="task-btn task8-btn">Нажми на меня</button>
+        </div>
       </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
     <script src="/javascript/task1.js"></script>
     <script src="/javascript/task2.js"></script>
     <script src="/javascript/task3.js"></script>
@@ -182,5 +193,6 @@
     <script src="/javascript/task6.js"></script>
     <script src="/javascript/task7.js"></script>
     <script src="/javascript/task8.js"></script>
+    <script src="/javascript/main.js"></script>
   </body>
 </html>

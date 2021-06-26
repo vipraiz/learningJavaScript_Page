@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-*::after {
+.tasks *::after {
   color: #a2928b;
   font-size: 18px;
   position: absolute;
@@ -16,6 +16,42 @@ html {
   left: 50%;
   transform: translateX(-50%);
   top: -20px;
+}
+
+.swal2-popup {
+  background-color: #f9f7f6;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #a2928b !important;
+  color: #f9f7f6 !important;
+  user-select: none;
+  width: 100px;
+}
+
+.swal2-styled.swal2-cancel {
+  color: #f9f7f6 !important;
+  user-select: none;
+  width: 100px;
+}
+
+.swal2-input-label {
+  padding-bottom: 8px;
+}
+
+.swal2-input[type='number'] {
+  margin: 0 auto;
+}
+
+.swal2-input[type='number']::-webkit-outer-spin-button,
+.swal2-input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.swal2-title {
+  text-transform: uppercase !important;
+  user-select: none;
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -71,6 +107,77 @@ input {
   margin: 0 auto;
 }
 
+.hat {
+  max-width: 720px;
+  border: 4mm ridge #a2928b;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-weight: 700;
+  user-select: none;
+  background-color: #f9f7f6;
+  font-size: 18px;
+}
+
+.sort {
+  max-width: 146px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 4px 0;
+}
+
+.arrows {
+  position: relative;
+  cursor: pointer;
+}
+
+#stateInput {
+  display: none;
+}
+
+#stateInput + .arrows:after {
+  content: ' ';
+  position: absolute;
+  left: 10px;
+  bottom: -16px;
+  border: 10px solid transparent;
+  border-top: 10px solid #a2928b;
+  border-width: 12px 7px;
+  pointer-events: none;
+}
+
+#stateInput:checked + .arrows:after {
+  content: ' ';
+  position: absolute;
+  left: 10px;
+  bottom: -16px;
+  border: 10px solid transparent;
+  border-top: 10px solid green;
+  border-width: 12px 7px;
+  pointer-events: none;
+}
+
+#stateInput + .arrows:before {
+  pointer-events: none;
+  content: ' ';
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid green;
+  border-width: 12px 7px;
+}
+
+#stateInput:checked + .arrows:before {
+  content: ' ';
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #a2928b;
+  border-width: 12px 7px;
+}
+
 .task {
   max-width: 720px;
   border: 4mm ridge #a2928b;
@@ -103,6 +210,7 @@ input {
 
 .task-btn {
   text-decoration: none;
+  outline: none;
   display: inline-block;
   padding: 10px 30px;
   margin: 10px 20px;
@@ -156,8 +264,8 @@ input {
   content: 'MAX';
 }
 
-.task5 + input::-webkit-outer-spin-button,
-.task5 + input::-webkit-inner-spin-button {
+.task5 input::-webkit-outer-spin-button,
+.task5 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
