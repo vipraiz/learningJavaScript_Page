@@ -1,8 +1,8 @@
 let askending, activePage;
 {
-  let shownPages = 5;
+  let shownTasks = 5;
 
-  let pages = Math.ceil($('.tasks').children().length / shownPages);
+  let pages = Math.ceil($('.tasks').children().length / shownTasks);
   let pagination = $('.pagination');
   pagination.append;
   for (let i = 1; i <= pages; ++i) {
@@ -98,18 +98,18 @@ let askending, activePage;
         $('.right-page').removeClass('disabled-page');
       }
 
-      for (let i = 0; i < shownPages; ++i) {
+      for (let i = 0; i < shownTasks; ++i) {
         if (
           !askending &&
-          tasks.children().length - i - activePage * shownPages - 1 < 0
+          tasks.children().length - i - activePage * shownTasks - 1 < 0
         )
           break;
         tasks
           .children()
           .eq(
             askending
-              ? i + activePage * shownPages
-              : tasks.children().length - i - activePage * shownPages - 1
+              ? i + activePage * shownTasks
+              : tasks.children().length - i - activePage * shownTasks - 1
           )
           .css('display', 'block');
       }

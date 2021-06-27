@@ -352,3 +352,7 @@ input {
 .task6-inputC::after {
   content: 'C';
 }
+
+.task7-input input {
+  width: 80px;
+}
