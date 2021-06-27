@@ -24,7 +24,9 @@ $('.task3-btn').on('click', function () {
     if (Number(elem) < 10) {
       if (elem[0] == '+' || elem[0] == '-') {
         elem = elem[0] + '0' + elem[1];
-      } else elem = '0' + elem;
+      } else {
+        elem = '0' + elem;
+      }
     }
     return elem;
   }

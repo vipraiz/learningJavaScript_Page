@@ -26,6 +26,9 @@
           <input type="checkbox" id="stateInput" />
           <label class="arrows" for="stateInput"></label>
         </div>
+        <ul class="pagination">
+          <li class="left-page"><a href="#1">&laquo;</a></li>
+        </ul>
       </section>
       <section class="tasks">
         <div class="task" id="task1" sort-rating="1">
@@ -107,7 +110,7 @@
           <button class="task-btn task4-btn">Нажми на меня</button>
         </div>
 
-        <div class="task task5" id="task5-1" sort-rating="5">
+        <div class="task" id="task5-1" sort-rating="5">
           <div class="task-announce">
             task5.1 (моё плохое решение)
             <p>
@@ -116,17 +119,19 @@
             </p>
             <span> большие значения вводить опасно! </span>
           </div>
-          <input
+          <div class="task5-1-input arrowsNotNeeded">
+            <input
             type="number"
             min="1"
             max="999999999999"
             value="10"
             id="task5-1-input"
-          />
+            />
+          </div>
           <div class="task5-1-output"></div>
         </div>
 
-        <div class="task task5" id="task5-2" sort-rating="6">
+        <div class="task" id="task5-2" sort-rating="6">
           <div class="task-announce">
             task5.2 (моё нормальное решение)
             <p>
@@ -134,13 +139,15 @@
               пользователем, в порядке возрастания, разделенных знаком «*».
             </p>
           </div>
-          <input
+         <div class="task5-2-input arrowsNotNeeded">
+          <input 
             type="number"
             min="1"
             max="999999999999"
             value="10"
             id="task5-2-input"
           />
+        </div>
           <div class="task5-2-output"></div>
         </div>
 
@@ -152,15 +159,15 @@
               переставить цифры в числах A и B, чтобы в сумме получилось C.
             </p>
           </div>
-          <div class="task6-inputs">
+          <div class="task6-inputs arrowsNotNeeded">
             <div class="task6-inputA">
-              <input type="number" min="1" max="9999" value="12" id="task6-a" />
+              <input type="number" min="1" max="999999999" value="12" id="task6-a" />
             </div>
             <div class="task6-inputB">
-              <input type="number" min="1" max="9999" value="31" id="task6-b" />
+              <input type="number" min="1" max="999999999" value="31" id="task6-b" />
             </div>
             <div class="task6-inputC">
-              <input type="number" min="1" max="9999" value="25" id="task6-c" />
+              <input type="number" min="1" max="999999999" value="25" id="task6-c" />
             </div>
           </div>
           <button class="task-btn task6-btn">Нажми на меня</button>
@@ -180,6 +187,22 @@
             <p>текст</p>
           </div>
           <button class="task-btn task8-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task9" sort-rating="10">
+          <div class="task-announce">
+            task9
+            <p>текст</p>
+          </div>
+          <button class="task-btn task9-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task10" sort-rating="11">
+          <div class="task-announce">
+            task10
+            <p>текст</p>
+          </div>
+          <button class="task-btn task10-btn">Нажми на меня</button>
         </div>
       </section>
     </div>

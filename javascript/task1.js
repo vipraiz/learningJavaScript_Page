@@ -33,13 +33,14 @@ $('.task1-btn').on('click', function () {
               title: 'task1',
               html: 'Ничего себе! Ты угадал с первой pop-itки.',
             });
-          else
+          else {
             Swal.fire({
               icon: 'success',
               title: 'task1',
               html: 'Вы победили! Количество попыток: ' + attemptСounter,
             });
-          return true;
+            return true;
+          }
         } else {
           Swal.fire({
             icon: 'error',
