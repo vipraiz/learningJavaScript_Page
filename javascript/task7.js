@@ -1,9 +1,9 @@
-$('#task6-input').on('change', function () {
+$('#task7-input').on('change', function () {
   $(this).val((_i, v) => Math.max(this.min, Math.min(this.max, v)));
 });
 
 $('.task7-btn').on('click', function () {
-  let n = Number($('#task6-input').val());
+  let n = Number($('#task7-input').val());
   let n2 = n * 2;
   let counter = 0;
 
@@ -15,20 +15,18 @@ $('.task7-btn').on('click', function () {
   //   }
   //   if (j == i) ++counter;
   // }
+  //////////////////////////////////////////////
 
   // средненький алгоритм
-  // function isPrime(num) {
-  //   let j = 2,
-  //     k = Math.sqrt(num);
-  //   for (; j <= k; ++j) {
-  //     if (num % j == 0) return false;
-  //   }
-  //   return true;
-  // }
-
   // for (let i = n + 1; i < n2; ++i) {
-  //   if (isPrime(i)) ++counter;
+  //   let j = 2,
+  //     k = Math.sqrt(i);
+  //   for (; j <= k; ++j) {
+  //     if (i % j == 0) break;
+  //   }
+  //   if (j > k) ++counter;
   // }
+  //////////////////////////////////////////////
 
   // запоминаем простые числа, самый быстрый алгоритм
   let p = [2];

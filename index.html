@@ -27,7 +27,7 @@
           <label class="arrows" for="stateInput"></label>
         </div>
         <ul class="pagination">
-          <li class="left-page"><a href="#1">&laquo;</a></li>
+          <li class="left-page"><a href="#1" draggable="false">&laquo;</a></li>
         </ul>
       </section>
       <section class="tasks">
@@ -159,14 +159,14 @@
               переставить цифры в числах A и B, чтобы в сумме получилось C.
             </p>
           </div>
-          <div class="task6-inputs arrowsNotNeeded">
-            <div class="task6-inputA">
+          <div class="task6-inputs arrowsNotNeeded inputsW80">
+            <div class="task6-inputA input-announce">
               <input type="number" min="1" max="999999999" value="12" id="task6-a" />
             </div>
-            <div class="task6-inputB">
+            <div class="task6-inputB input-announce">
               <input type="number" min="1" max="999999999" value="31" id="task6-b" />
             </div>
-            <div class="task6-inputC">
+            <div class="task6-inputC input-announce">
               <input type="number" min="1" max="999999999" value="25" id="task6-c" />
             </div>
           </div>
@@ -178,13 +178,13 @@
             task7
             <p>Постулат Бертрана (теорема Бертрана-Чебышева, теорема Чебышева) гласит, что для любого n > 1 найдется простое число p в интервале n < p < 2n. Такая гипотеза была выдвинута в 1845 году французским математиком Джозефем Бертраном (проверившим ее до n=3000000) и доказана в 1850 году Пафнутием Чебышевым. <br><br>Ваша задача состоит в том, чтобы решить несколько более общую задачу – а именно по числу n найти количество простых чисел p из интервала n < p < 2n (2 ≤ n ≤ 1 000 000).</p>
           </div>
-          <div class="task7-input arrowsNotNeeded">
+          <div class="task7-input arrowsNotNeeded inputsW80">
             <input
             type="number"
             min="2"
             max="1000000"
             value="2"
-            id="task6-input"
+            id="task7-input"
             />
           </div>
           <button class="task-btn task7-btn">Нажми на меня</button>
@@ -193,7 +193,22 @@
         <div class="task"task" id="task8" sort-rating="9">
           <div class="task-announce">
             task8
-            <p>текст</p>
+            <p>Во время исследований, посвященных появлению жизни на планете Олимпия, учеными было сделано несколько сенсационных открытий:<br><br>
+              1. Все живые организмы планеты происходят от бактерии Bitozoria Programulis.<br>
+              2. Эволюция происходила шаг за шагом (по предположению ученых – во время изменения климата на планете).<br>
+              3. На каждом шаге эволюции из каждого вида образовывались ровно два подвида, а предыдущий вид исчезал.<br>
+              4. Если считать появление бактерии Bitozoria Programulis первым шагом эволюции, то существующие сейчас живые организмы находятся на N-ом шаге.<br><br>
+              Чтобы не придумывать названия во время исследований, ученые пронумеровали все виды организмов, которые когда-либо существовали на планете. Для этого они нарисовали дерево эволюции с корнем Bitozoria Programulis, которая получила номер 1. Далее нумеровали виды каждого шага эволюции слева направо. Таким образом непосредственные подвиды Bitozoria Programulis получили номера 2 и 3. Следующими были занумерованы виды третьего шага эволюции – подвиды вида 2 получили номера 4 и 5, а вида 3 – номера 6 и 7, и т.д.<br><br>
+              Напишите программу, которая по номерам двух видов вычислит номер вида их ближайшего общего предка в дереве эволюции.<br><br>
+              Числа A и B представляют номера видов, для которых требуется найти номер их ближайшего общего предка.</p>
+          </div>
+          <div class="task8-inputs arrowsNotNeeded inputsW80">
+            <div class="task8-inputA input-announce">
+              <input type="number" min="1" max="999999999" value="12" id="task8-a" />
+            </div>
+            <div class="task8-inputB input-announce">
+              <input type="number" min="1" max="999999999" value="15" id="task8-b" />
+            </div>
           </div>
           <button class="task-btn task8-btn">Нажми на меня</button>
         </div>
@@ -225,6 +240,8 @@
     <script src="/javascript/task6.js"></script>
     <script src="/javascript/task7.js"></script>
     <script src="/javascript/task8.js"></script>
+    <script src="/javascript/task9.js"></script>
+    <script src="/javascript/task10.js"></script>
     <script src="/javascript/main.js"></script>
   </body>
 </html>

@@ -223,6 +223,10 @@ input {
   border-width: 12px 7px;
 }
 
+.inputsW80 input {
+  width: 80px;
+}
+
 .tasks {
   display: flex;
   flex-direction: column;
@@ -233,7 +237,7 @@ input {
   border: 4mm ridge #a2928b;
   text-align: center;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 20px 30px;
   font-weight: 700;
   user-select: none;
   background-color: #f9f7f6;
@@ -269,7 +273,7 @@ input {
   overflow: hidden;
   border: 2px solid #a2928b;
   border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Bitter', sans-serif;
   color: #a2928b;
   transition: 0.2s ease-in-out;
   background: none;
@@ -329,13 +333,7 @@ input {
   user-select: all;
 }
 
-.task6-inputs input {
-  width: 80px;
-}
-
-.task6-inputA,
-.task6-inputB,
-.task6-inputC {
+.input-announce {
   display: inline-block;
   position: relative;
   margin-top: 20px;
@@ -353,6 +351,10 @@ input {
   content: 'C';
 }
 
-.task7-input input {
-  width: 80px;
+.task8-inputA::after {
+  content: 'A';
+}
+
+.task8-inputB::after {
+  content: 'B';
 }

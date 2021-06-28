@@ -49,7 +49,7 @@ function getPrimeFactorsStr2(value) {
 $('#task5-1-input').on('input', function () {
   $(this).val((_i, v) => {
     if (v == '-') return '';
-    return v;
+    return Math.min(this.max, v);
   });
   let value = Number($('#task5-1-input').val());
   $('.task5-1-output').text(getPrimeFactorsStr1(value));
@@ -58,7 +58,7 @@ $('#task5-1-input').on('input', function () {
 $('#task5-2-input').on('input', function () {
   $(this).val((_i, v) => {
     if (v == '-') return '';
-    return v;
+    return Math.min(this.max, v);
   });
   let value = Number($('#task5-2-input').val());
   $('.task5-2-output').text(getPrimeFactorsStr2(value));

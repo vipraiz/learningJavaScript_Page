@@ -7,10 +7,14 @@ let askending, activePage;
   pagination.append;
   for (let i = 1; i <= pages; ++i) {
     pagination.append(
-      $(`<li class="pagination-page"><a href="#">${i}</a></li>`)
+      $(
+        `<li class="pagination-page"><a href="#" draggable="false">${i}</a></li>`
+      )
     );
   }
-  pagination.append('<li class="right-page"><a href="#">&raquo;</a></li>');
+  pagination.append(
+    '<li class="right-page"><a href="#" draggable="false">&raquo;</a></li>'
+  );
 
   try {
     if (
