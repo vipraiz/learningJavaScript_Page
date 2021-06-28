@@ -358,3 +358,19 @@ input {
 .task8-inputB::after {
   content: 'B';
 }
+
+.task9-inputX1::after {
+  content: 'X1';
+}
+
+.task9-inputY1::after {
+  content: 'Y1';
+}
+
+.task9-inputX2::after {
+  content: 'X2';
+}
+
+.task9-inputY2::after {
+  content: 'Y2';
+}
