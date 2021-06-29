@@ -217,23 +217,22 @@
           <div class="task-announce">
             task9
             <p>Вова попал на космическом корабле на бесконечную плоскую планету в точку с координатами (x1, y1).<br> Вова, управляя кораблем, имеет возможность за одну секунду телепортироваться из точки (x, y) в одну из точек (x+C, y+C), (x+C, y-C), (x-C, y+C), (x-C, y-C), где C - произвольное натуральное число, которое можно изменять на каждом ходу.<br><br>
-              Требуется написать программу, которая определит, через какое минимальное время Вове удастся достичь точки (x2, y2). Ответ должен содержать одно число – минимальное время телепортации. Если такая телепортация невозможна или точки одинаковы, сообщить о невозможности телепортации.<br>
-            Входные данные: 0 ≤ число ≤ 999 999 999</p>
+              Требуется написать программу, которая определит, через какое минимальное время Вове удастся достичь точки (x2, y2). Ответ должен содержать одно число – минимальное время телепортации. Если такая телепортация невозможна или точки одинаковы, сообщить о невозможности телепортации.</p>
           </div>
           <div class="task9-inputs arrowsNotNeeded inputsW80">
             <div class="task9-inputX1 input-announce">
-              <input type="number" min="0" max="999999999" value="0" id="task9-x1" />
+              <input type="number" min="-999999999" max="999999999" value="0" id="task9-x1" />
             </div>
             <div class="task9-inputY1 input-announce">
-              <input type="number" min="0" max="999999999" value="0" id="task9-y1" />
+              <input type="number" min="-999999999" max="999999999" value="0" id="task9-y1" />
             </div>
           </div>
           <div class="task9-inputs arrowsNotNeeded inputsW80">
             <div class="task9-inputX2 input-announce">
-              <input type="number" min="0" max="999999999" value="0" id="task9-x2" />
+              <input type="number" min="-999999999" max="999999999" value="0" id="task9-x2" />
             </div>
             <div class="task9-inputY2 input-announce">
-              <input type="number" min="0" max="999999999" value="2" id="task9-y2" />
+              <input type="number" min="-999999999" max="999999999" value="2" id="task9-y2" />
             </div>
           </div>
           <button class="task-btn task9-btn">Нажми на меня</button>
@@ -242,9 +241,30 @@
         <div class="task"task" id="task10">
           <div class="task-announce">
             task10
-            <p>текст</p>
+            <p>Петя написал программу движения робота К-79. Программа состоит из следующих команд: <br>
+              S — сделать шаг вперед<br>
+              L — повернуться на 90 градусов влево<br>
+              R — повернуться на 90 градусов вправо<br><br>
+              Напишите программу, которая по заданной программе для робота определит, сколько шагов он сделает прежде, чем впервые вернется на то место, на котором уже побывал до этого, либо установит, что этого не произойдет. <br>
+              Входные данные: одна строка из английских букв S, L, R, описывающая программу для робота.</p>
           </div>
           <button class="task-btn task10-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task11">
+          <div class="task-announce">
+            task11
+            <p>текст</p>
+          </div>
+          <button class="task-btn task11-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task12">
+          <div class="task-announce">
+            task12
+            <p>текст</p>
+          </div>
+          <button class="task-btn task12-btn">Нажми на меня</button>
         </div>
       </section>
     </div>
@@ -260,6 +280,8 @@
     <script src="/javascript/task8.js"></script>
     <script src="/javascript/task9.js"></script>
     <script src="/javascript/task10.js"></script>
+    <script src="/javascript/task11.js"></script>
+    <script src="/javascript/task12.js"></script>
     <script src="/javascript/main.js"></script>
   </body>
 </html>

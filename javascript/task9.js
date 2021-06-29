@@ -11,20 +11,20 @@ $('.task9-btn').on('click', function () {
     X2 = Number($('#task9-x2').val()),
     Y2 = Number($('#task9-y2').val());
 
-  let string = 'Телепортация невозможна.';
+  let answer = 'Телепортация невозможна.';
   if (X1 != X2 || Y1 != Y2) {
     if ((X1 + Y1) % 2 == (X2 + Y2) % 2) {
       if (Math.abs(X1 - X2) == Math.abs(Y1 - Y2)) {
-        string = 1;
+        answer = 1;
       } else {
-        string = 2;
+        answer = 2;
       }
     }
   }
 
   Swal.fire({
-    icon: isNaN(string) ? 'error' : 'success',
+    icon: isNaN(answer) ? 'error' : 'success',
     title: 'task9',
-    html: string,
+    html: answer,
   });
 });

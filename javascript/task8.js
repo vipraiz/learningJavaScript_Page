@@ -9,12 +9,16 @@ $('.task8-btn').on('click', function () {
   let A, B;
   (A = Number($('#task8-a').val())), (B = Number($('#task8-b').val()));
 
-  while (A != B) {
-    if (A > B) {
-      A = Math.floor(A / 2);
-    } else {
-      B = Math.floor(B / 2);
+  if (A != B) {
+    while (A != B) {
+      if (A > B) {
+        A = Math.floor(A / 2);
+      } else {
+        B = Math.floor(B / 2);
+      }
     }
+  } else {
+    A = Math.floor(A / 2);
   }
 
   Swal.fire({
