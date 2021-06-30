@@ -374,3 +374,11 @@ input {
 .task9-inputY2::after {
   content: 'Y2';
 }
+
+.task11-inputA::after {
+  content: 'A';
+}
+
+.task11-inputB::after {
+  content: 'B';
+}
