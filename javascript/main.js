@@ -1,6 +1,6 @@
 let askending, activePage;
 {
-  let shownTasks = 5;
+  let shownTasks = 8;
 
   let pages = Math.ceil($('.tasks').children().length / shownTasks);
   let pagination = $('.pagination');
