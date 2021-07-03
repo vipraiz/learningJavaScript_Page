@@ -11,15 +11,18 @@ $('.task13-btn').on('click', function () {
     (N = Number($('#task13-n').val()));
   startGame(X, Y, N);
 
+  const w = $('.swal2-html-container').width();
+
   $('.minesweeper-field')
     .css('width', 'fit-content')
     .css('margin', '0 auto')
     .css('display', 'grid')
-    .css('grid-template-columns', `repeat(${X}, ${400 / X}px)`);
+    .css('grid-template-columns', `repeat(${X}, ${w / X}px)`);
 
   $('.minesweeper-btn')
-    .css('height', `${400 / X}px`)
-    .css('font-size', `${200 / X}px`);
+    .css('color', '#433c47')
+    .css('height', `${w / X}px`)
+    .css('font-size', `${w / 2 / X}px`);
 
   function startGame(width, height, numOfBombs) {
     Swal.fire({
@@ -55,7 +58,7 @@ $('.task13-btn').on('click', function () {
 
       const row = Math.floor(index / width);
       const column = index % width;
-      open(row, column);
+      open(row, column, true);
     });
 
     $('.minesweeper-field').bind('contextmenu', (event) => {
@@ -65,10 +68,12 @@ $('.task13-btn').on('click', function () {
 
       const index = cells.indexOf(event.target);
       if (flags.includes(index)) {
-        cells[index].innerHTML = ' ';
+        cells[index].innerHTML = '';
         let i = flags.indexOf(index);
         flags.splice(i, 1);
       } else {
+        if (cells[index].innerHTML !== '') return false;
+
         cells[index].innerHTML = '❗';
         flags.push(index);
 
@@ -104,18 +109,40 @@ $('.task13-btn').on('click', function () {
       return count;
     }
 
-    function open(row, column) {
+    function open(row, column, shifted = false) {
       if (!isValid(row, column)) return;
 
       const index = row * width + column;
       const cell = cells[index];
+
+      if (cell.innerHTML != '' && !shifted) return;
       if (cell.disabled === true) return;
-      cell.disabled = true;
 
       if (isBomb(row, column)) {
         openAllCells();
         $('.minesweeper').contents()[0].nodeValue = 'Упс! Вы проиграли!';
       } else {
+        if (shifted && cell.innerHTML != '' && cell.innerHTML != '❗') {
+          let numOfFlags = 0;
+          for (let x = -1; x <= 1; ++x) {
+            for (let y = -1; y <= 1; ++y) {
+              if (
+                isValid(row + y, column + x) &&
+                flags.includes((row + y) * width + column + x)
+              ) {
+                numOfFlags++;
+              }
+            }
+          }
+          if (numOfFlags == Number(cell.innerHTML))
+            for (let x = -1; x <= 1; ++x) {
+              for (let y = -1; y <= 1; ++y) {
+                open(row + y, column + x);
+              }
+            }
+          return;
+        }
+
         closedCount--;
         if (closedCount <= numOfBombs) {
           openAllCells();
@@ -126,7 +153,8 @@ $('.task13-btn').on('click', function () {
           cell.innerHTML = count;
           return;
         } else {
-          cell.innerHTML = ' ';
+          cell.disabled = true;
+          cell.innerHTML = '';
         }
 
         for (let x = -1; x <= 1; ++x) {
@@ -156,7 +184,7 @@ $('.task13-btn').on('click', function () {
           if (count !== 0) {
             cells[index].innerHTML = count;
           } else {
-            cells[index].innerHTML = ' ';
+            cells[index].innerHTML = '';
           }
           cells[index].disabled = true;
         }
