@@ -1,11 +1,32 @@
+$('.task13-inputs')
+  .children()
+  .children()
+  .on('change', function () {
+    $(this).val((_i, v) => Math.max(this.min, Math.min(this.max, v)));
+  });
+
 $('.task13-btn').on('click', function () {
-  startGame(8, 8, 13);
+  (X = Number($('#task13-x').val())),
+    (Y = Number($('#task13-y').val())),
+    (N = Number($('#task13-n').val()));
+  startGame(X, Y, N);
+
+  $('.minesweeper-field')
+    .css('width', 'fit-content')
+    .css('margin', '0 auto')
+    .css('display', 'grid')
+    .css('grid-template-columns', `repeat(${X}, ${400 / X}px)`);
+
+  $('.minesweeper-btn')
+    .css('height', `${400 / X}px`)
+    .css('font-size', `${200 / X}px`);
 
   function startGame(width, height, numOfBombs) {
     Swal.fire({
       title: 'task13',
       html: `<div class="minesweeper">Неизвестных мин: ${numOfBombs}<div class="minesweeper-field"></div></div>`,
     });
+
     const field = document.querySelector('.minesweeper-field');
     const cellsCount = width * height;
     field.innerHTML = '<button class="minesweeper-btn"></buttton>'.repeat(
