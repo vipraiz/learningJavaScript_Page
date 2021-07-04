@@ -3,12 +3,22 @@ $('.task13-inputs')
   .children()
   .on('change', function () {
     $(this).val((_i, v) => Math.max(this.min, Math.min(this.max, v)));
+    const inputN = document.getElementById('task13-n');
+    inputN.setAttribute('max', $('#task13-x').val() * $('#task13-y').val() - 1);
+
+    $('#task13-n').val((_i, v) =>
+      Math.max(
+        $('#task13-n').attr('min'),
+        Math.min($('#task13-n').attr('max'), v)
+      )
+    );
   });
 
 $('.task13-btn').on('click', function () {
   (X = Number($('#task13-x').val())),
     (Y = Number($('#task13-y').val())),
     (N = Number($('#task13-n').val()));
+
   startGame(X, Y, N);
 
   const w = $('.swal2-html-container').width();
@@ -115,14 +125,16 @@ $('.task13-btn').on('click', function () {
       const index = row * width + column;
       const cell = cells[index];
 
-      if (cell.innerHTML != '' && !shifted) return;
+      if (shifted && flags.includes(index)) return;
+      if (!shifted && cell.innerHTML != '') return;
       if (cell.disabled === true) return;
 
       if (isBomb(row, column)) {
+        cell.disabled = true;
         openAllCells();
         $('.minesweeper').contents()[0].nodeValue = 'Упс! Вы проиграли!';
       } else {
-        if (shifted && cell.innerHTML != '' && cell.innerHTML != '❗') {
+        if (shifted && cell.innerHTML != '') {
           let numOfFlags = 0;
           for (let x = -1; x <= 1; ++x) {
             for (let y = -1; y <= 1; ++y) {
@@ -150,6 +162,7 @@ $('.task13-btn').on('click', function () {
         }
         const count = getNearBombsCount(row, column);
         if (count !== 0) {
+          $(cell).css('background-color', '#e6e6f0');
           cell.innerHTML = count;
           return;
         } else {
@@ -175,8 +188,8 @@ $('.task13-btn').on('click', function () {
       });
 
       let count, index;
-      for (let x = 0; x < width; x++) {
-        for (let y = 0; y < height; y++) {
+      for (let x = 0; x < height; x++) {
+        for (let y = 0; y < width; y++) {
           index = x * width + y;
           if (bombs.includes(index)) continue;
 

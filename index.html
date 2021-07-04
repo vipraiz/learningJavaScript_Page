@@ -270,7 +270,17 @@
         <div class="task"task" id="task12">
           <div class="task-announce">
             task12
-            <p>текст</p>
+            <p>Назовем значение выражения 2^(2^N) N-ой сверхстепенью числа 2. Таким образом, например, третья сверхстепень числа 2 равна 2^(2^3) = 2^8 = 256.<br><br>
+              Ваша задача – вычислить N-ую сверхстепень двойки по модулю M.<br>
+            Входные данные: (0 ≤ N ≤ 999 999 999) и (2 ≤ M ≤ 999 999 999).</p>
+          </div>
+          <div class="task12-inputs arrowsNotNeeded inputsW80">
+            <div class="task12-inputN input-announce">
+              <input type="number" min="0" max="999999999" value="10" id="task12-n" />
+            </div>
+            <div class="task12-inputM input-announce">
+              <input type="number" min="2" max="999999999" value="10" id="task12-m" />
+            </div>
           </div>
           <button class="task-btn task12-btn">Нажми на меня</button>
         </div>
@@ -278,9 +288,58 @@
         <div class="task"task" id="task13">
           <div class="task-announce">
             task13
-            <p>текст</p>
+            <p>Сапёр.<br>
+              X и Y - размеры поля, N - количество мин <br>
+            Входные данные: (2 ≤ X ≤ 16), (2 ≤ Y ≤ 100), (1 ≤ N < X * Y)</p>
+          </div>
+          <div class="task13-inputs arrowsNotNeeded inputsW80">
+            <div class="task13-inputX input-announce">
+              <input type="number" min="2" max="16" value="8" id="task13-x" />
+            </div>
+            <div class="task13-inputY input-announce">
+              <input type="number" min="2" max="100" value="8" id="task13-y" />
+            </div>
+            <div class="task13-inputN input-announce">
+              <input type="number" min="1" max="1599" value="13" id="task13-n" />
+            </div>
           </div>
           <button class="task-btn task13-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task14">
+          <div class="task-announce">
+            task14
+            <p>Корнем K степени из строки S называется такая строка T (если она существует), что T^k = S.<br>
+              Ваша задача состоит в том, чтобы написать программу, находящую степень строки или корень из нее.<br><br>
+              Если длина ответа превосходит 1023 символа, выведите только первые 1023 символа. Если искомой строки не существует — выведите NO SOLUTION.<br><br>
+              Входные данные: K ≠ 0, |K| ≤ 100000<br>S имеет ненулевую длину, не превосходящую 1000.
+            </p>
+          </div>
+          <div class="task14-inputs arrowsNotNeeded inputsW80">
+            <div class="task14-inputS input-announce">
+              <input type="text" maxlength="1000" value="abc" id="task14-s" />
+            </div>
+            <div class="task14-inputK input-announce">
+              <input type="number" min="-100000" max="100000" value="2" id="task14-k" />
+            </div>
+          </div>
+          <button class="task-btn task14-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task15">
+          <div class="task-announce">
+            task15
+            <p>текст</p>
+          </div>
+          <button class="task-btn task15-btn">Нажми на меня</button>
+        </div>
+
+        <div class="task"task" id="task16">
+          <div class="task-announce">
+            task16
+            <p>текст</p>
+          </div>
+          <button class="task-btn task16-btn">Нажми на меня</button>
         </div>
       </section>
     </div>
@@ -299,6 +358,9 @@
     <script src="/javascript/task11.js"></script>
     <script src="/javascript/task12.js"></script>
     <script src="/javascript/task13.js"></script>
+    <script src="/javascript/task14.js"></script>
+    <script src="/javascript/task15.js"></script>
+    <script src="/javascript/task16.js"></script>
     <script src="/javascript/main.js"></script>
   </body>
 </html>

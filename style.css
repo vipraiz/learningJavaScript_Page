@@ -382,3 +382,44 @@ input {
 .task11-inputB::after {
   content: 'B';
 }
+
+.task12-inputN::after {
+  content: 'N';
+}
+
+.task12-inputM::after {
+  content: 'M';
+}
+
+.minesweeper-btn {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #d2d2e6;
+  border: 1px solid #433c47;
+}
+
+.minesweeper-btn:disabled {
+  background-color: #e6e6f0;
+}
+
+.task13-inputX::after {
+  content: 'X';
+}
+
+.task13-inputY::after {
+  content: 'Y';
+}
+
+.task13-inputN::after {
+  content: 'N';
+}
+
+.task14-inputS::after {
+  content: 'S';
+}
+
+.task14-inputK::after {
+  content: 'K';
+}
