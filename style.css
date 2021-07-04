@@ -423,3 +423,7 @@ input {
 .task14-inputK::after {
   content: 'K';
 }
+
+.task15-inputS::after {
+  content: 'S';
+}

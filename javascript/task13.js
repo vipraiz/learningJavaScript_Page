@@ -62,7 +62,19 @@ $('.task13-btn').on('click', function () {
       if (isFirstClick) {
         bombs = [...Array(cellsCount).keys()];
         bombs.splice(index, 1);
-        bombs = bombs.sort(() => Math.random() - 0.5).slice(0, numOfBombs);
+
+        //bombs = bombs.sort(() => Math.random() - 0.5).slice(0, numOfBombs);
+        //изменил сортировку из-за https://habr.com/ru/post/358094/
+
+        //теперь используем алгорит сортировки Фишера-Йетса
+        let j, temp;
+        for (let i = bombs.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          temp = bombs[j];
+          bombs[j] = bombs[i];
+          bombs[i] = temp;
+        }
+        bombs = bombs.slice(0, numOfBombs);
         isFirstClick = false;
       }
 
