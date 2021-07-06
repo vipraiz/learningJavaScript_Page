@@ -66,7 +66,7 @@ $('.task13-btn').on('click', function () {
         //bombs = bombs.sort(() => Math.random() - 0.5).slice(0, numOfBombs);
         //изменил сортировку из-за https://habr.com/ru/post/358094/
 
-        //теперь используем алгорит сортировки Фишера-Йетса
+        //теперь здесь алгорит сортировки Фишера-Йетса
         let j, temp;
         for (let i = bombs.length - 1; i > 0; i--) {
           j = Math.floor(Math.random() * (i + 1));
