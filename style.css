@@ -435,3 +435,11 @@ input {
 .task16-inputM::after {
   content: 'M';
 }
+
+.task17-inputN::after {
+  content: 'N';
+}
+
+.task17-inputM::after {
+  content: 'M';
+}

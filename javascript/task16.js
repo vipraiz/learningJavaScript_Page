@@ -27,7 +27,6 @@ $('.task16-btn').on('click', function () {
 
   function getLosingNumber(amount, number) {
     if (number == 1) return amount;
-    if (number == amount) return amount - 1;
 
     let s = 0;
     while (number % 2 != 0) {
